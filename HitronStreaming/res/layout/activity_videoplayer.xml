@@ -1,0 +1,34 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation= "horizontal" >
+    
+    <io.vov.vitamio.widget.CenterLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <io.vov.vitamio.widget.VideoView
+            android:id="@+id/surface_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </io.vov.vitamio.widget.CenterLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_rec1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/record_start" />
+
+    <ImageView
+        android:id="@+id/ibtn_hitronlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/hitron02" />
+    
+</AbsoluteLayout>

@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout android:id="@+id/first_row_layout"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+    	
+        <RelativeLayout
+            android:id="@+id/x1y1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@+id/x2y1"
+            android:nextFocusRight="@+id/x2y1"
+            android:onClick="clickLiveStreaming" >
+
+    		<ImageView android:id="@+id/network_icon"
+    	   		android:layout_width="wrap_content"
+    	    	android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15dp"
+    	    	android:scaleType="fitXY"  
+    	    	android:background="@drawable/network" />
+    	
+    	 	<TextView
+        		android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/network_icon"
+    			android:layout_centerHorizontal="true"
+    			android:layout_marginTop="15dp"
+        		android:text="@string/status_text"
+        		android:textColor="#ffffff"
+        		android:textSize="18sp" />
+    	 
+     	</RelativeLayout>	
+     	
+        <RelativeLayout
+            android:id="@+id/x2y1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@+id/x1y1"
+            android:nextFocusRight="@+id/x1y1"
+            android:onClick="clickPlayback" >
+    	 	
+			<ImageView android:id="@+id/log_icon"
+    	   		android:layout_width="wrap_content"
+    	    	android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15dp"
+    	    	android:scaleType="fitXY"  
+    	    	android:background="@drawable/log" />
+        	
+			<TextView
+        		android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/log_icon"
+    			android:layout_centerHorizontal="true"
+    			android:layout_marginTop="15dp"
+        		android:text="@string/log_text"
+        		android:textColor="#ffffff"
+        		android:textSize="18sp" />	
+        </RelativeLayout>
+	</LinearLayout>
+	
+	
+    <LinearLayout android:id="@+id/second_row_layout"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="5dp"
+        android:layout_below="@+id/first_row_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+			
+        <RelativeLayout
+            android:id="@+id/x1y2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_off"
+            android:visibility="invisible" >
+      
+			<ImageView android:id="@+id/signal_icon"
+    	   		android:layout_width="wrap_content"
+    	    	android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15dp"
+    	    	android:scaleType="fitXY"  
+    	    	android:background="@drawable/signalstrength_on" />
+			
+			<TextView
+        		android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/signal_icon"
+    			android:layout_centerHorizontal="true"
+    			android:layout_marginTop="15dp"
+        		android:text="@string/signal_text"
+        		android:textColor="#ffffff"
+        		android:textSize="18sp" />	
+        		
+		</RelativeLayout>
+		
+        <RelativeLayout
+            android:id="@+id/x2y2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_off"
+            android:visibility="invisible" >
+       
+			<ImageView android:id="@+id/wificonn_icon"
+    	   		android:layout_width="wrap_content"
+    	    	android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15dp"
+    	    	android:scaleType="fitXY"  
+    	    	android:background="@drawable/wificonn" />
+		
+			<TextView
+        		android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/wificonn_icon"
+    			android:layout_centerHorizontal="true"
+    			android:layout_marginTop="15dp"
+        		android:text="@string/wifi_text"
+        		android:textColor="#ffffff"
+        		android:textSize="18sp" />	
+        </RelativeLayout>
+		
+	</LinearLayout>
+	
+    <TextView
+        android:id="@+id/version_text"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	android:layout_marginBottom="5dp"
+    	android:layout_centerHorizontal="true"
+        android:textColor="#5bc4ea"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

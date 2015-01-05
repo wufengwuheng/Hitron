@@ -1,0 +1,2 @@
+Credentials: admin:password
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=

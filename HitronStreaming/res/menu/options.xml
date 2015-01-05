@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <item android:id="@+id/option_button"
+        android:showAsAction="ifRoom"
+        android:title="Options"
+        android:icon="@drawable/function_off">
+		
+		<menu>
+            <item android:id="@+id/clear_log_button"
+                  android:title="@string/clear_log_text" />
+            <item android:id="@+id/send_log_button"
+                  android:title="@string/send_log_text" android:visible="false"/>
+            <item android:id="@+id/export_log_button"
+                  android:title="@string/export_log_text" android:visible="false"/>
+        </menu>
+        
+	</item>
+</menu>
